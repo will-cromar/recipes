@@ -1,19 +1,33 @@
-name: Hugo site CI
+# Based on this blog post: https://medium.com/zendesk-engineering/a-github-actions-workflow-to-generate-publish-your-hugo-website-f36375e56cf7
+name: Build and Deploy Hugo Site
 
 on:
   push:
     branches: [ actions ]
-  pull_request:
-    branches: [ actions ]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the site in the klakegg/hugo container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/workspace/ \
-        -w /workspace/ \
-        klakegg/hugo:alpine -D
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+          submodules: true  # Fetch Hugo themes
+          fetch-depth: 0
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+          hugo-version: 'latest'
+
+    - name: Clean public directory
+      run: rm -rf public
+
+    - name: Build
+      run: hugo
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
