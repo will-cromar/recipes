@@ -1,0 +1,51 @@
+baseURL: 'https://recipes.cromar.me'
+title: Cromar Recipes
+paginate: 10
+theme: hugo-PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpored: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+taxonomies:
+  tags: tags
+  author: author
+
+menu:
+  main:
+    - name: Archive
+      url: /archive/
+      weight: 1
+    - name: Authors
+      url: /author/
+      weight: 2
+    - name: Tags
+      url: /tags/
+      weight: 3
+
+params:
+  env: production
+  title: Cromar Recipes
+  description: "hello there"
+  author: Will and Jillian Cromar
+
+  ShowReadingTime: false
+  ShowShareButtons: false
+  comments: false
+  defaultTheme: auto
+  disableThemeToggle: false
+  disableSpecial1stPost : true
+
+  # profile-mode
+  profileMode:
+    enabled: False # needs to be explicitly set
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Cromar Recipes"
+    Content: Collection of recipes from Will and Jillian Cromar
