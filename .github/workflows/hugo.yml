@@ -1,0 +1,19 @@
+name: Hugo site CI
+
+on:
+  push:
+    branches: [ actions ]
+  pull_request:
+    branches: [ actions ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the site in the klakegg/hugo container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/workspace/ \
+        -w /workspace/ \
+        klakegg/hugo:alpine -D
