@@ -1,4 +1,4 @@
-baseURL: 'https://recipes.cromar.me'
+baseURL: 'https://will-cromar.github.io/recipes/'
 title: Cromar Recipes
 paginate: 10
 theme: hugo-PaperMod
