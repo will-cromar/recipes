@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Cromar Recipes</title>
+    <link>https://recipes.cromar.me/posts/</link>
+    <description>Recent content in Posts on Cromar Recipes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 11 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://recipes.cromar.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pressure Cooker Lentil Chili</title>
+      <link>https://recipes.cromar.me/posts/lentil-chili/</link>
+      <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://recipes.cromar.me/posts/lentil-chili/</guid>
+      <description>Lentil Chili is my go-to recipe if I&amp;rsquo;m feeding a large group. It&amp;rsquo;s inexpensive, optionally vegan, and very hands-off. I also made this all the time for myself when I was in university &amp;ndash; in addition to being dirt cheap, the leftovers keep and reheat well for 1 to 2 weeks.
+I&amp;rsquo;ve always made this in my 6 quart Instant Pot, but you could also almost certainly make it in a slow cooker or dutch oven as well if you adjust the cook-time and amount of liquid accordingly.</description>
+    </item>
+    
+  </channel>
+</rss>
